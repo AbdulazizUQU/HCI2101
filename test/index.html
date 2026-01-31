@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>واجهة تسجيل دخول</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      min-height:100vh;
+      display:flex;
+      align-items:center;   /* توسيط عمودي */
+      justify-content:center; /* توسيط أفقي */
+      background:#00092f;
+    }
+
+    .card{
+      width: min(380px, 92vw);
+      background:#8573ff;
+      padding:24px;
+      border-radius:16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    h1{
+      margin:0 0 16px;
+      font-size:20px;
+      text-align:center;
+    }
+
+    label{
+      display:block;
+      margin:12px 0 6px;
+      font-size:14px;
+      color:#333;
+    }
+
+    input{
+      width:100%;
+      padding:10px 4px;
+      border:1px solid #dddddd;
+      border-radius:12px;
+      font-size:14px;
+      outline:none;
+    }
+
+    input:focus{
+      border-color:#6c63ff;
+    }
+
+    button{
+      width:100%;
+      margin-top:16px;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      font-size:15px;
+      cursor:pointer;
+      background:#080452;
+      color:#ffffff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>تسجيل الدخول</h1>
+
+  <form action="welcome.html">
+    <label for="username">اسم المستخدم</label>
+    <input id="username" type="text" placeholder="اكتب اسم المستخدم">
+
+    <label for="password">كلمة المرور</label>
+    <input id="password" type="password" placeholder="اكتب كلمة المرور">
+
+    <label for="password2">تأكيد كلمة المرور</label>
+    <input id="password2" type="password" placeholder="أعد كتابة كلمة المرور">
+
+    <button type="submit">دخول</button>
+  </form>
+</div>
+
+
