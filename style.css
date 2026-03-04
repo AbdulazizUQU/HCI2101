@@ -1,0 +1,215 @@
+/* ====== Base ====== */
+*{ box-sizing:border-box; }
+
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f4f4f4;
+  color:#111;
+}
+
+/* ====== Top Menu (Fixed) ====== */
+.menu{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:999;
+  background:#222;
+  padding:12px 10px;
+  text-align:center;
+  overflow-x:auto;
+  white-space:nowrap;
+}
+
+.menu a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+
+.menu a:hover{ color:#00c3ff; }
+
+/* ====== Page Layout ====== */
+.page{ padding-top:75px; }
+
+.hero{
+  max-width:1000px;
+  margin:0 auto;
+  padding:18px 16px;
+}
+
+.hero h1{ margin:0 0 6px; }
+.hero p{ margin:0; opacity:.8; }
+
+/* ====== Sections / Cards ====== */
+.section{ margin:18px auto; }
+
+.card-wide{
+  max-width:1000px;
+  margin:0 auto;
+  background:#fff;
+  padding:18px 16px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 18px;
+}
+
+/* ====== Tables ====== */
+.table-wrap{ overflow-x:auto; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+th, td{
+  border:1px solid #ddd;
+  padding:10px;
+  text-align:left;
+}
+
+/* ====== References ====== */
+.refs{
+  display:grid;
+  gap:14px;
+  margin-top:10px;
+}
+
+.ref-item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.ref-item img{
+  width:60px;
+  height:80px;
+  object-fit:cover;
+  border-radius:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.muted{
+  opacity:.75;
+  font-size:14px;
+}
+
+/* ====== Footer ====== */
+.footer{
+  max-width:1000px;
+  margin:0 auto 25px;
+  padding:10px 16px;
+}
+
+/* ====== RTL Support ====== */
+.rtl{ direction:rtl; }
+.rtl th, .rtl td{ text-align:right; }
+
+/* ====== Dark Mode ====== */
+.dark{
+  background:#121212;
+  color:#fff;
+}
+
+.dark .menu{ background:#000; }
+.dark .card-wide{ background:#1f1f1f; }
+.dark th, .dark td{ border-color:#333; }
+
+/* ====== Responsive ====== */
+@media (max-width:700px){
+  .grid-2{ grid-template-columns:1fr; }
+  .menu a{ margin:0 8px; }
+}
+
+.team-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.team-card{
+background:#fff;
+padding:20px;
+border-radius:12px;
+text-align:center;
+width:260px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.team-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.dark .team-card{
+background:#1f1f1f;
+}
+/* ===== TEAM PAGE ===== */
+
+.container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card{
+background:#ffffff;
+padding:25px;
+border-radius:12px;
+width:260px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.card h3{
+margin:5px 0;
+}
+
+.card h4{
+margin:5px 0;
+font-weight:normal;
+color:#555;
+}
+
+.card p{
+font-size:14px;
+margin:4px 0;
+}
+
+/* Dark Mode Support */
+
+.dark .card{
+background:#1f1f1f;
+color:#ffffff;
+}
+
+.dark .card h4{
+color:#bbb;
+}
